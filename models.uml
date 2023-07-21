@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.example.backend0.models</OriginalElement>
+  <nodes>
+    <node x="176.72800925925927" y="832.0">com.example.backend0.models.Group</node>
+    <node x="290.97800925925924" y="348.0">com.example.backend0.models.Report</node>
+    <node x="176.0" y="634.0">com.example.backend0.models.Student</node>
+    <node x="104.24305555555554" y="205.0">com.example.backend0.models.Role</node>
+    <node x="92.7430555555556" y="348.0">com.example.backend0.models.User</node>
+    <node x="325.28125" y="194.0">com.example.backend0.models.FileMetadata</node>
+    <node x="406.0983796296297" y="546.0">com.example.backend0.models.Meeting</node>
+    <node x="82.24305555555554" y="0.0">com.example.backend0.models.ERole</node>
+    <node x="0.0" y="634.0">com.example.backend0.models.Instructor</node>
+    <node x="506.97800925925924" y="404.5">com.example.backend0.models.EMeetingStatus</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.example.backend0.models.Group" target="com.example.backend0.models.Meeting" relationship="TO_MANY">
+      <point x="67.125" y="-83.0" />
+      <point x="333.35300925925924" y="810.0" />
+      <point x="530.5983796296297" y="810.0" />
+      <point x="41.5" y="116.0" />
+    </edge>
+    <edge source="com.example.backend0.models.Meeting" target="com.example.backend0.models.Report" relationship="TO_ONE">
+      <point x="0.0" y="-116.0" />
+      <point x="489.0983796296297" y="514.0" />
+      <point x="437.97800925925924" y="514.0" />
+      <point x="49.0" y="72.0" />
+    </edge>
+    <edge source="com.example.backend0.models.Report" target="com.example.backend0.models.Meeting" relationship="TO_ONE">
+      <point x="-49.0" y="72.0" />
+      <point x="339.97800925925924" y="524.0" />
+      <point x="433.7650462962963" y="524.0" />
+      <point x="-55.33333333333334" y="-116.0" />
+    </edge>
+    <edge source="com.example.backend0.models.Student" target="com.example.backend0.models.User" relationship="GENERALIZATION">
+      <point x="0.0" y="-28.0" />
+      <point x="254.0" y="524.0" />
+      <point x="160.7430555555556" y="524.0" />
+      <point x="0.0" y="72.0" />
+    </edge>
+    <edge source="com.example.backend0.models.Group" target="com.example.backend0.models.Instructor" relationship="TO_ONE">
+      <point x="-67.125" y="-83.0" />
+      <point x="199.10300925925927" y="810.0" />
+      <point x="39.0" y="810.0" />
+      <point x="-39.0" y="28.0" />
+    </edge>
+    <edge source="com.example.backend0.models.FileMetadata" target="com.example.backend0.models.Report" relationship="TO_ONE">
+      <point x="-33.25" y="50.0" />
+      <point x="358.53125" y="321.0" />
+      <point x="339.97800925925924" y="321.0" />
+      <point x="-49.0" y="-72.0" />
+    </edge>
+    <edge source="com.example.backend0.models.Meeting" target="com.example.backend0.models.Group" relationship="TO_ONE">
+      <point x="-41.5" y="116.0" />
+      <point x="447.5983796296297" y="800.0" />
+      <point x="260.97800925925924" y="800.0" />
+      <point x="260.97800925925924" y="810.0" />
+      <point x="243.85300925925927" y="810.0" />
+      <point x="-22.375" y="-83.0" />
+    </edge>
+    <edge source="com.example.backend0.models.Instructor" target="com.example.backend0.models.User" relationship="GENERALIZATION">
+      <point x="0.0" y="-28.0" />
+      <point x="78.0" y="524.0" />
+      <point x="160.7430555555556" y="524.0" />
+      <point x="0.0" y="72.0" />
+    </edge>
+    <edge source="com.example.backend0.models.Instructor" target="com.example.backend0.models.Group" relationship="TO_MANY">
+      <point x="39.0" y="28.0" />
+      <point x="117.0" y="800.0" />
+      <point x="260.97800925925924" y="800.0" />
+      <point x="260.97800925925924" y="810.0" />
+      <point x="243.85300925925927" y="810.0" />
+      <point x="-22.375" y="-83.0" />
+    </edge>
+    <edge source="com.example.backend0.models.Report" target="com.example.backend0.models.FileMetadata" relationship="TO_MANY">
+      <point x="49.0" y="-72.0" />
+      <point x="437.97800925925924" y="321.0" />
+      <point x="425.03125" y="321.0" />
+      <point x="33.25" y="50.0" />
+    </edge>
+    <edge source="com.example.backend0.models.Meeting" target="com.example.backend0.models.EMeetingStatus" relationship="TO_ONE">
+      <point x="55.333333333333314" y="-116.0" />
+      <point x="544.431712962963" y="524.0" />
+      <point x="582.4780092592592" y="524.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.example.backend0.models.Group" target="com.example.backend0.models.Student" relationship="TO_MANY">
+      <point x="22.375" y="-83.0" />
+      <point x="288.60300925925924" y="810.0" />
+      <point x="293.0" y="810.0" />
+      <point x="39.0" y="28.0" />
+    </edge>
+    <edge source="com.example.backend0.models.Student" target="com.example.backend0.models.Group" relationship="TO_MANY">
+      <point x="-39.0" y="28.0" />
+      <point x="215.0" y="800.0" />
+      <point x="260.97800925925924" y="800.0" />
+      <point x="260.97800925925924" y="810.0" />
+      <point x="243.85300925925927" y="810.0" />
+      <point x="-22.375" y="-83.0" />
+    </edge>
+    <edge source="com.example.backend0.models.Role" target="com.example.backend0.models.ERole" relationship="TO_ONE">
+      <point x="-2.8421709430404007E-14" y="-39.0" />
+      <point x="0.0" y="72.0" />
+    </edge>
+    <edge source="com.example.backend0.models.User" target="com.example.backend0.models.Role" relationship="TO_MANY">
+      <point x="-2.8421709430404007E-14" y="-72.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.2512770137524556" showDependencies="true" x="314.0474488845583" y="243.92934526613288" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
