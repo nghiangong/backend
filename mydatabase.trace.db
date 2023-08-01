@@ -58,3 +58,10 @@ alter table if exists order add constraint FK42n6bwxjow4r0ggipa22ig5ag foreign k
 2023-07-18 16:37:24 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists [*]order add constraint FKk7chtkr6c0f97eypausdp5dg2 foreign key (student_id) references students"; expected "identifier"; SQL statement:
 alter table if exists order add constraint FKk7chtkr6c0f97eypausdp5dg2 foreign key (student_id) references students [42001-214]
+2023-08-01 14:52:55 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]USERS"; expected "UPDATE, USE"; SQL statement:
+USERS [42001-214]
+2023-08-01 15:49:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-08-01 15:51:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]

@@ -57,7 +57,6 @@ public class AuthController {
 
   @PostMapping("/signin")
   public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
-
     Authentication authentication = authenticationManager
         .authenticate(new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
 
@@ -88,6 +87,7 @@ public class AuthController {
     User user = new User(signUpRequest.getUsername(),
                          signUpRequest.getFullname(),
                          encoder.encode(signUpRequest.getPassword()));
+
 
     Set<String> strRoles = signUpRequest.getRoles();
     Set<Role> roles = new HashSet<>();

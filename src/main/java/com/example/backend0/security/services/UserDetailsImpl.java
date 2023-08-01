@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.ToString;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -14,7 +15,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import com.example.backend0.models.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-@AllArgsConstructor @Getter
+@AllArgsConstructor @Getter @ToString
 public class UserDetailsImpl implements UserDetails {
   private static final long serialVersionUID = 1L;
 
@@ -22,10 +23,10 @@ public class UserDetailsImpl implements UserDetails {
 
   private String username;
 
+  private String fullname;
+
   @JsonIgnore
   private String password;
-
-  private String fullname;
 
   private Collection<? extends GrantedAuthority> authorities;
 
@@ -38,7 +39,7 @@ public class UserDetailsImpl implements UserDetails {
         user.getId(), 
         user.getUsername(), 
         user.getFullname(),
-        user.getPassword(), 
+        user.getPassword(),
         authorities);
   }
 
